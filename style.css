@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+    --Primary-Dark-cyan: hsl(158, 36%, 37%);        /*Primary*/
+    --Primary-Cream: hsl(30, 38%, 92%);
+    --Neutral-Very-dark-blue: hsl(212, 21%, 14%);   /*Neutral*/
+    --Neutral-Dark-grayish-blue: hsl(228, 12%, 48%);
+    --Neutral-White: hsl(0, 0%, 100%);
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+p, h6 { font-size: 14px; color: var(--Neutral-Dark-grayish-blue); line-height : 22px; font-weight: 500;}
+body{ 
+    background-color: var(--Primary-Cream); 
+    display: grid; 
+    justify-content: center;
+    align-self: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+}
+.center{ 
+    display: grid; 
+    background-color: var(--Neutral-White);
+    border-radius: 10px;
+}
+.left{
+    background-size: cover;
+    background-image:url("./images/image-product-desktop.jpg");
+}
+.right{
+    width: 100%;
+    height: 100%;
+    display: inline;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 6px;
+    padding-bottom: 40px;
+}
+.left img{ width: 100%; object-fit: cover; }
+.precios{ display: grid; grid-auto-flow: column; }
+h1{ color: black; font-family: 'Fraunces', serif; font-weight: 700; line-height : 32px;}
+h2{ color:var(--Primary-Dark-cyan)}
+.precios h1{ color: var(--Primary-Dark-cyan);}
+button{ background-color: var(--Primary-Dark-cyan); color: var(--Neutral-White)}
+button{ width: 100%; border-style: none; border-radius: 5px; height: 50px;}
+button img {margin-right: 6px; height: 14px; width: auto; margin-bottom:-2px;}
+button p {color:--Neutral-White;}
+
+.precios p, span{text-decoration: line-through;}
+
+@media only screen and (max-width: 1400px){
+    .center{        
+        width: 560px;
+        grid-auto-flow: column;
+    }
+    .left{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        width: 280px;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 400px){
+    .center{
+        width: 350px;
+        grid-auto-flow: row;
+    }
+    
+    .left{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        width: auto;
+        height: 360px;
+    }
+    
+}
